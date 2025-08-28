@@ -1,0 +1,21 @@
+# Node modules
+/node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Pasta de uploads (imagens enviadas pelo usuário)
+uploads/
+
+# Arquivos de ambiente
+.env
+
+# Pastas temporárias
+tmp/
+temp/
