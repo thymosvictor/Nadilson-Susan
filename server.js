@@ -9,12 +9,8 @@ const dotenv = require("dotenv");
 
 // Carregar variáveis de ambiente
 dotenv.config();
-
 // Conexão com o MongoDB Atlas usando mongoose
-mongoose.connect(process.env.DB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
+mongoose.connect(process.env.DB_URI)
   .then(() => console.log("🚀 Conectado ao MongoDB Atlas"))
   .catch((err) => console.error("Erro ao conectar ao MongoDB Atlas:", err));
 
@@ -35,7 +31,11 @@ const upload = multer({ storage });
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(session({ secret: "chave-secreta", resave: false, saveUninitialized: true }));
+app.use(session({
+  secret: "chave-secreta",
+  resave: false,
+  saveUninitialized: true,
+}));
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
@@ -151,4 +151,3 @@ app.get("/items", async (req, res) => {
 app.listen(PORT, () =>
   console.log(`🚀 Servidor rodando em http://localhost:${PORT}`)
 );
-
