@@ -5,59 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <title>Itens</title>
+    <title>Items</title>
 </head>
 <body>
-    <!-- Seção de botões -->
     <div class="buttons">
-        <a href="./login.html">
-            <button><i class="fas fa-user"></i> Perfil</button>
-        </a>
-        <button id="openModal">Adicionar Item</button>
+    <a href="./login.html"><button><i class="fas fa-user"></i> Perfil</button></a>
+    <button id="openModal">Adicionar Item</button>
     </div>
 
-    <!-- Modal para adicionar/editar itens -->
     <div id="itemModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modalTitle">Adicionar Item</h2>
-            <form id="itemForm">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required />
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="modalTitle">Adicionar Items</h2>
+        <form id="itemForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required />
 
-                <label for="films">Preço:</label>
-                <input type="text" id="films" name="films" required />
+            <label for="films">Preço:</label>
+            <input type="text" id="films" name="films" required />
 
-                <label for="quantity">Quantidade:</label>
-                <input type="text" id="quantity" name="quantity" required />
+            <label for="quantity">Quantidade:</label>
+            <input type="text" id="quantity" name="quantity" required />
 
-                <label for="image">Foto:</label>
-                <input type="file" id="image" name="image" accept="image/*" required />
+            <label for="image">Foto:</label>
+            <input type="file" id="image" name="image" accept="image/*" required />
 
-                <button type="submit" id="saveDirectorBtn">Salvar</button>
-            </form>
-            <p id="responseMsg"></p>
-        </div>
+            <button type="submit" id="saveDirectorBtn">Salvar</button>
+        </form>
+        <p id="responseMsg"></p>
+    </div>
     </div>
 
-    <!-- Seção para exibir os itens -->
     <section class="Items">
-        <div class="titulo">
-            <h2>Todos os Itens</h2>
-        </div>
-        <section id="cardsSection" class="cards"></section>
+    <div class="titulo"><h2>Todos os Items</h2></div>
+    <section id="cardsSection" class="cards"></section>
     </section>
 
-    <!-- Rodapé de contato -->
     <footer class="footer">
         <h3>ENTRE EM CONTATO:</h3>
         <div class="contact-icons">
-            <a href="mailto:nadilsonsouza@gmail.com" target="_blank">
-                <i class="fas fa-envelope"></i> nadilsonsouza@gmail.com
-            </a>
-            <a href="https://wa.me/5581984374966" target="_blank">
-                <i class="fab fa-whatsapp"></i> (81) 98437-4966
-            </a>
+        <a href="mailto:nadilsonsouza@gmail.com" target="_blank"><i class="fas fa-envelope"></i> nadilsonsouza@gmail.com</a>
+        <a href="https://wa.me/5581XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp"></i> (81) 98437-4966</a>
         </div>
     </footer>
 
